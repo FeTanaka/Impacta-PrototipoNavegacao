@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/destino1Fragment">
+
+    <fragment
+        android:id="@+id/destino1Fragment"
+        android:name="br.com.impacta.prototiponavegao.Destino1Fragment"
+        android:label="fragment_destino1"
+        tools:layout="@layout/fragment_destino1" >
+        <action
+            android:id="@+id/action_destino1Fragment_to_destino2Fragment"
+            app:destination="@id/destino2Fragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/destino2Fragment"
+        android:name="br.com.impacta.prototiponavegao.Destino2Fragment"
+        android:label="fragment_destino2"
+        tools:layout="@layout/fragment_destino2" >
+        <action
+            android:id="@+id/action_destino2Fragment_to_destino1Fragment"
+            app:destination="@id/destino1Fragment" />
+    </fragment>
+</navigation>
